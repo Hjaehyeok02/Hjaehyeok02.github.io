@@ -1,0 +1,175 @@
+<!--
+  개인 사이트 — GitHub Pages에 그대로 올리면 됩니다 (파일명 index.html 유지).
+  채울 곳(href="#..."): GITHUB_URL, SCHOLAR_URL(선택), 논문별 PAPERn_URL/PDF/CODE/PAGE, TEPS.
+  없는 링크는 그냥 지우면 됩니다. 공개 페이지라 전화번호는 넣지 않았습니다.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jae-Hyeok Heo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#0a0a0a;
+    --soft:#333333;
+    --dim:#777777;
+    --line:#e3e3e3;
+    --accent:#0a0a0a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Schibsted Grotesk",system-ui,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+    display:grid;
+    grid-template-columns:clamp(260px,30%,360px) 1fr;
+    gap:clamp(40px,6vw,100px);
+    max-width:1240px;margin:0 auto;
+    padding:clamp(52px,8vh,96px) clamp(28px,6vw,80px) clamp(48px,8vh,80px);
+  }
+  a{color:var(--accent);text-decoration:none;
+    background-image:linear-gradient(currentColor,currentColor);
+    background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+    transition:background-size .3s ease;padding-bottom:1px}
+  a:hover{background-size:100% 1px}
+  .ext::after{content:"\2197";font-size:.82em;margin-left:1px;display:inline-block;
+    transition:transform .2s ease}
+  .ext:hover::after{transform:translate(2px,-2px)}
+  ::selection{background:#0a0a0a;color:#fff}
+
+  /* left identity (sticky) */
+  header{position:sticky;top:clamp(48px,8vh,88px);align-self:start}
+  .name{font-size:clamp(33px,3.4vw,46px);font-weight:600;letter-spacing:-.025em;line-height:1.04}
+  .name .ko{display:block;font-weight:400;font-size:.42em;color:var(--dim);letter-spacing:0;margin-top:10px}
+  .tagline{font-size:clamp(15px,1.4vw,17px);color:var(--soft);margin-top:18px;max-width:30ch}
+  .rule{width:38px;height:2px;background:var(--ink);margin:22px 0 0}
+  .contact{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--dim);
+    margin-top:24px;display:flex;flex-direction:column;gap:9px;align-items:flex-start}
+  .contact a{color:var(--ink)}
+
+  /* right content */
+  main{min-width:0}
+  section{margin-bottom:clamp(38px,5vw,56px)}
+  section:last-of-type{margin-bottom:0}
+  .label{position:relative;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--dim);
+    padding-top:16px;border-top:1px solid var(--line);margin-bottom:20px}
+  .label::before{content:"";position:absolute;top:-1px;left:0;width:30px;height:2px;background:var(--ink)}
+
+  .lede{font-size:18px;line-height:1.55;color:var(--ink);max-width:58ch}
+
+  .entry{margin-bottom:20px}.entry:last-child{margin-bottom:0}
+  .entry .role{font-weight:600;font-size:16px}
+  .entry .meta{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--dim);margin:2px 0 5px}
+  .entry .desc{color:var(--soft);max-width:62ch}
+
+  .pub{position:relative;margin-bottom:22px;transition:transform .25s ease}
+  .pub:last-child{margin-bottom:0}
+  .pub::before{content:"";position:absolute;left:-18px;top:.6em;width:10px;height:1px;background:var(--ink);
+    opacity:0;transform:translateX(-6px);transition:opacity .25s ease,transform .25s ease}
+  .pub:hover{transform:translateX(6px)}
+  .pub:hover::before{opacity:1;transform:none}
+  .pub .ptitle{font-weight:600;font-size:16.5px;line-height:1.34}
+  .pub .ptitle a{color:var(--ink)}
+  .pub .authors{font-size:14px;color:var(--soft);margin-top:4px}
+  .pub .authors b{color:var(--ink);font-weight:600}
+  .pub .venue{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--dim);margin-top:5px}
+  .pub .result{font-size:14px;color:var(--soft);margin-top:5px;max-width:64ch}
+  .pub .links{font-family:"JetBrains Mono",monospace;font-size:11px;margin-top:7px;color:var(--line)}
+  .pub .links a{color:var(--dim)}.pub .links a:hover{color:var(--accent)}
+
+  .kv{margin-bottom:8px;color:var(--soft);max-width:64ch}
+  .kv .k{font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;
+    letter-spacing:.08em;color:var(--dim);margin-right:10px}
+
+  footer{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--dim);
+    margin-top:clamp(46px,6vw,64px);padding-top:16px;border-top:1px solid var(--line)}
+
+  header,main{animation:fade .7s ease both}
+  main{animation-delay:.08s}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+  @media (max-width:860px){
+    body{grid-template-columns:1fr;gap:clamp(34px,8vw,48px)}
+    header{position:static}
+    .name .ko{display:inline-block;margin:0 0 0 .45em}
+  }
+</style>
+
+<header>
+  <h1 class="name">Jae-Hyeok Heo<span class="ko">허재혁</span></h1>
+  <p class="tagline">Working on 3D scene perception and generation, with an eye toward AR.</p>
+  <div class="rule"></div>
+  <div class="contact">
+    <a href="mailto:hjh37310@knu.ac.kr">hjh37310@knu.ac.kr</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="label">About</div>
+    <p class="lede">I'm an undergraduate in CS at Kyungpook National University. My work covers both sides of 3D scenes: perceiving them (V2X cooperative perception, sensor fusion) and generating them (synthetic data and behavior simulation in virtual environments). I'm interested in world models that stay physically and spatially consistent, and in using them for AR.</p>
+  </section>
+
+  <section>
+    <div class="label">Education</div>
+    <div class="entry">
+      <div class="role">B.S. in Computer Science and Engineering</div>
+      <div class="meta">Kyungpook National University, Daegu · Mar 2021 – Feb 2027 (expected)</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label">Research</div>
+    <div class="entry">
+      <div class="role">Undergraduate Researcher, Virtual Reality Lab (Prof. Soon Ki Jung)</div>
+      <div class="meta">KNU · May 2025 – Present</div>
+      <div class="desc">Synthetic video-dataset generation in virtual environments (Unreal Engine, MetaHuman); an LLM-driven human-behavior simulation pipeline.</div>
+    </div>
+    <div class="entry">
+      <div class="role">Capstone Design I & II and an industry project with FutureDrive</div>
+      <div class="meta">MSIT SW-Oriented University Program · 2025 Fall – 2026 Spring</div>
+      <div class="desc">V2X cooperative perception; calibration-free ROS–camera sensor fusion.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label">Publications</div>
+
+    <div class="pub">
+      <div class="ptitle"><a href="#PAPER1_URL">Efficient Obstacle Filtering Using Dynamic ROI and CNN-Based Risk Heatmap in V2X Cooperative Perception</a></div>
+      <div class="authors"><b>Jae-Hyeok Heo</b>, Jong-Rak Hwang, Do-Geun Kim, Gu-Tae Kwon, Dae-Young Min, Yun-Seoung Ha, Dong-Kyun Kim</div>
+      <div class="venue">KIIS Spring Conference 2026 · First author</div>
+      <div class="result">A speed-adaptive ROI and a CNN risk heatmap that cut obstacle volume by 78.0% at a 2.7% risk-miss rate.</div>
+    </div>
+
+    <div class="pub">
+      <div class="ptitle"><a href="#PAPER2_URL">An LLM-Driven Pipeline for Synthetic Surveillance Video Dataset Generation in Virtual Environments</a></div>
+      <div class="authors">Junbeom Moon, <b>Jae Hyeok Heo</b>, Soon Ki Jung</div>
+      <div class="venue">IEEE VR 2026 (Poster) · Second author</div>
+      <div class="result">Role-conditioned human behavior simulation in Unreal/MetaHuman, combining an LLM planner with graph-based spatial constraints; 463 annotated synthetic scenarios.</div>
+    </div>
+
+    <div class="pub">
+      <div class="ptitle"><a href="#PAPER3_URL">Calibration-Free Transformer-Based ROS–Camera Fusion Model for Coordinate Refinement</a></div>
+      <div class="authors"><b>JaeHyeok Heo</b>, DoGeun Kim, Jongrak Hwang, Gutae Kwon, Daeyoung Min, Yunseong Ha, Seolyoung Jeong</div>
+      <div class="venue">IEIE Fall Conference 2025 · First author</div>
+      <div class="result">Statistical spatiotemporal alignment (Umeyama) with Transformer residual correction; 30–40% lower RMSE growth under sensor dropout or noise.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label">Honors &amp; Skills</div>
+    <div class="kv"><span class="k">Honors</span>Academic Excellence Scholarship, KNU — 5 semesters</div>
+    <div class="kv"><span class="k">Skills</span>Python · PyTorch · OpenCV · Unreal Engine · MetaHuman · ROS</div>
+    <div class="kv"><span class="k">Areas</span>3D perception &amp; sensor fusion · Transformers / CNNs · generative simulation</div>
+    <div class="kv"><span class="k">Languages</span>Korean (native) · English</div>
+  </section>
+
+  <footer>© 2026 Jae-Hyeok Heo · Daegu, Korea</footer>
+</main>
