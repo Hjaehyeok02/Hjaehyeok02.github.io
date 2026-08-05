@@ -56,6 +56,7 @@
   .label::before{content:"";position:absolute;top:-1px;left:0;width:30px;height:2px;background:var(--ink)}
 
   .lede{font-size:18px;line-height:1.55;color:var(--ink);max-width:58ch}
+  .lede+.lede{margin-top:1em}
 
   .entry{margin-bottom:20px}.entry:last-child{margin-bottom:0}
   .entry .role{font-weight:600;font-size:16px}
@@ -109,14 +110,15 @@
 <main>
   <section>
     <div class="label">About</div>
-    <p class="lede">I'm an undergraduate in CS at Kyungpook National University. I'm interested in making reconstructed real scenes interactive — recovering not just geometry but the physical properties needed to simulate how they respond, and deciding how much of that response can be shown to a user without breaking either immersion or safety.</p>
+    <p class="lede">I am an undergraduate in Computer Science and Engineering at Kyungpook National University. My research experience spans 3D reconstruction, sensor fusion, synthetic data generation, and XR.</p>
+    <p class="lede">I am interested in how machines recover and represent 3D environments, and how those representations can be used for simulation and interaction. Recently, I have been thinking about two questions: what physical properties are actually needed to model how a scene responds, and how much of that response should be shown to a user while preserving immersion and safety.</p>
   </section>
 
   <section>
     <div class="label">Education</div>
     <div class="entry">
       <div class="role">B.S. in Computer Science and Engineering</div>
-      <div class="meta">Kyungpook National University, Daegu · Mar 2021 – Feb 2027 (expected)</div>
+      <div class="meta">Kyungpook National University, Daegu, Mar 2021 - Feb 2027 (expected)</div>
     </div>
   </section>
 
@@ -124,13 +126,13 @@
     <div class="label">Research</div>
     <div class="entry">
       <div class="role">Undergraduate Researcher, Virtual Reality Lab (Prof. Soon Ki Jung)</div>
-      <div class="meta">KNU · May 2025 – May 2026</div>
+      <div class="meta">KNU, May 2025 - May 2026</div>
       <div class="desc">Synthetic video-dataset generation in immersive virtual environments (Unreal Engine, MetaHuman) for XR; an LLM-driven human-behavior simulation pipeline, published as an IEEE VR 2026 poster.</div>
     </div>
     <div class="entry">
       <div class="role">Capstone Design I & II and an industry project with FutureDrive</div>
-      <div class="meta">MSIT SW-Oriented University Program · 2025 Fall – 2026 Spring</div>
-      <div class="desc">V2X cooperative perception; calibration-free ROS–camera sensor fusion.</div>
+      <div class="meta">MSIT SW-Oriented University Program, 2025 Fall - 2026 Spring</div>
+      <div class="desc">V2X cooperative perception; calibration-free ROS-camera sensor fusion.</div>
     </div>
   </section>
 
@@ -140,7 +142,7 @@
     <div class="pub">
       <div class="ptitle"><a href="heo_kiis2026_v2x_obstacle_filtering.pdf" target="_blank" rel="noopener">Efficient Obstacle Filtering Using Dynamic ROI and CNN-Based Risk Heatmap in V2X Cooperative Perception</a></div>
       <div class="authors"><b>Jae-Hyeok Heo</b>, Jong-Rak Hwang, Do-Geun Kim, Gu-Tae Kwon, Dae-Young Min, Yun-Seoung Ha, Dong-Kyun Kim</div>
-      <div class="venue">KIIS Spring Conference 2026 · First author</div>
+      <div class="venue">KIIS Spring Conference 2026, First author</div>
       <div class="result">A speed-adaptive ROI and a CNN risk heatmap that cut obstacle volume by 78.0% at a 2.7% risk-miss rate.</div>
       <div class="links"><a href="heo_kiis2026_v2x_obstacle_filtering.pdf" target="_blank" rel="noopener">[ PDF ]</a></div>
     </div>
@@ -148,16 +150,16 @@
     <div class="pub">
       <div class="ptitle"><a href="moon_ieeevr2026_llm_surveillance_synthesis.pdf" target="_blank" rel="noopener">An LLM-Driven Pipeline for Synthetic Surveillance Video Dataset Generation in Virtual Environments</a></div>
       <div class="authors">Junbeom Moon, <b>Jae Hyeok Heo</b>, Soon Ki Jung</div>
-      <div class="venue">IEEE VR 2026 (Poster) · Second author</div>
+      <div class="venue">IEEE VR 2026 (Poster), Second author</div>
       <div class="result">Role-conditioned human behavior simulation in Unreal/MetaHuman, combining an LLM planner with graph-based spatial constraints; 463 annotated synthetic scenarios.</div>
       <div class="links"><a href="moon_ieeevr2026_llm_surveillance_synthesis.pdf" target="_blank" rel="noopener">[ PDF ]</a></div>
     </div>
 
     <div class="pub">
-      <div class="ptitle"><a href="heo_ieie2025_calibration_free_ros_camera_fusion.pdf" target="_blank" rel="noopener">Calibration-Free Transformer-Based ROS–Camera Fusion Model for Coordinate Refinement</a></div>
+      <div class="ptitle"><a href="heo_ieie2025_calibration_free_ros_camera_fusion.pdf" target="_blank" rel="noopener">Calibration-Free Transformer-Based ROS-Camera Fusion Model for Coordinate Refinement</a></div>
       <div class="authors"><b>JaeHyeok Heo</b>, DoGeun Kim, Jongrak Hwang, Gutae Kwon, Daeyoung Min, Yunseong Ha, Seolyoung Jeong</div>
-      <div class="venue">IEIE Fall Conference 2025 · First author</div>
-      <div class="result">Statistical spatiotemporal alignment (Umeyama) with Transformer residual correction; 30–40% lower RMSE growth under sensor dropout or noise.</div>
+      <div class="venue">IEIE Fall Conference 2025, First author</div>
+      <div class="result">Statistical spatiotemporal alignment (Umeyama) with Transformer residual correction; 30-40% lower RMSE growth under sensor dropout or noise.</div>
       <div class="links"><a href="heo_ieie2025_calibration_free_ros_camera_fusion.pdf" target="_blank" rel="noopener">[ PDF ]</a></div>
     </div>
   </section>
@@ -165,14 +167,14 @@
   <section>
     <div class="label">Projects</div>
     <div class="entry">
-      <div class="role">XR Fireball — Physically Grounded Effects in a Reconstructed Room</div>
-      <div class="meta">Personal project · COLMAP · MediaPipe · Vosk · OpenCV · 2026</div>
+      <div class="role">XR Fireball - Physically Grounded Effects in a Reconstructed Room</div>
+      <div class="meta">Personal project, COLMAP, MediaPipe, Vosk, OpenCV, 2026</div>
       <div class="desc">Voice- and gesture-triggered projectiles that collide with and are occluded by the reconstructed geometry of a real room. Compared COLMAP MVS, 2D Gaussian Splatting, and VGGT for interaction-ready geometry, and found that rendering quality and collision suitability do not align. Material-conditioned responses were hand-authored, which motivates automatic property estimation.</div>
       <!-- 데모 자리(직접 넣으세요): <img class="demo" src="media/fireball.gif" alt="XR Fireball demo"> 또는 <video class="demo" src="media/fireball.mp4" autoplay loop muted playsinline controls></video> -->
     </div>
     <div class="entry">
       <div class="role">3D-Consistent AR / DR / SR Editing</div>
-      <div class="meta">Personal project · COLMAP · YOLO + SAM · Blender · 2026</div>
+      <div class="meta">Personal project, COLMAP, YOLO + SAM, Blender, 2026</div>
       <div class="desc">Substitutional, diminished, and augmented reality applied to a single scanned video. Edits are defined once in world coordinates and projected per frame using COLMAP poses, with multi-view SAM voting to lift 2D masks into 3D labels.</div>
       <!-- 데모 자리(직접 넣으세요): <img class="demo" src="media/ardrsr.gif" alt="AR/DR/SR demo"> 또는 <video class="demo" src="media/ardrsr.mp4" autoplay loop muted playsinline controls></video> -->
     </div>
@@ -180,11 +182,11 @@
 
   <section>
     <div class="label">Honors &amp; Skills</div>
-    <div class="kv"><span class="k">Honors</span>Academic Excellence Scholarship, KNU — 5 semesters</div>
-    <div class="kv"><span class="k">Skills</span>Python · PyTorch · OpenCV · COLMAP · 3D Gaussian Splatting · Blender · SAM / YOLO · MediaPipe · Unreal Engine · MetaHuman · ROS</div>
-    <div class="kv"><span class="k">Areas</span>XR interaction · 3D reconstruction &amp; scene understanding · physically-based simulation · sensor fusion</div>
-    <div class="kv"><span class="k">Languages</span>Korean (native) · English</div>
+    <div class="kv"><span class="k">Honors</span>Academic Excellence Scholarship, KNU - 5 semesters</div>
+    <div class="kv"><span class="k">Skills</span>Python, PyTorch, OpenCV, COLMAP, 3D Gaussian Splatting, Blender, SAM / YOLO, MediaPipe, Unreal Engine, MetaHuman, ROS</div>
+    <div class="kv"><span class="k">Areas</span>XR interaction, 3D reconstruction &amp; scene understanding, physically-based simulation, sensor fusion</div>
+    <div class="kv"><span class="k">Languages</span>Korean (native), English</div>
   </section>
 
-  <footer>© 2026 Jae-Hyeok Heo · Daegu, Korea</footer>
+  <footer>© 2026 Jae-Hyeok Heo, Daegu, Korea</footer>
 </main>
