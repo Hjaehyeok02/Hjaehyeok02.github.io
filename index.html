@@ -63,6 +63,7 @@
   .entry .meta{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--dim);margin:2px 0 5px}
   .entry .desc{color:var(--soft);max-width:62ch}
   .demo{display:block;width:100%;max-width:520px;margin-top:14px;border:1px solid var(--line);border-radius:6px}
+  .cap{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--dim);margin-top:6px}
 
   .pub{position:relative;margin-bottom:22px;transition:transform .25s ease}
   .pub:last-child{margin-bottom:0}
@@ -170,13 +171,16 @@
       <div class="role">XR Fireball - Physically Grounded Effects in a Reconstructed Room</div>
       <div class="meta">Personal project, COLMAP, MediaPipe, Vosk, OpenCV, 2026</div>
       <div class="desc">Voice- and gesture-triggered projectiles that collide with and are occluded by the reconstructed geometry of a real room. Compared COLMAP MVS, 2D Gaussian Splatting, and VGGT for interaction-ready geometry, and found that rendering quality and collision suitability do not align. Material-conditioned responses were hand-authored, which motivates automatic property estimation.</div>
-      <!-- 데모 자리(직접 넣으세요): <img class="demo" src="media/fireball.gif" alt="XR Fireball demo"> 또는 <video class="demo" src="media/fireball.mp4" autoplay loop muted playsinline controls></video> -->
+      <img class="demo" src="media/fireball_cast.jpg" alt="Casting a fireball, aimed by hand, grounded in the reconstructed room.">
+      <img class="demo" src="media/fireball_cloud.jpg" alt="Dense point cloud of the room from COLMAP SfM and MVS.">
+      <p class="cap">Fireball cast, and the room reconstructed as a dense point cloud.</p>
     </div>
     <div class="entry">
       <div class="role">3D-Consistent AR / DR / SR Editing</div>
       <div class="meta">Personal project, COLMAP, YOLO + SAM, Blender, 2026</div>
       <div class="desc">Substitutional, diminished, and augmented reality applied to a single scanned video. Edits are defined once in world coordinates and projected per frame using COLMAP poses, with multi-view SAM voting to lift 2D masks into 3D labels.</div>
-      <!-- 데모 자리(직접 넣으세요): <img class="demo" src="media/ardrsr.gif" alt="AR/DR/SR demo"> 또는 <video class="demo" src="media/ardrsr.mp4" autoplay loop muted playsinline controls></video> -->
+      <img class="demo" style="max-width:100%" src="media/ardrsr_before_after.jpg" alt="Original desk on the left; on the right the monitor is replaced with a game teaser (SR), the keyboard is removed (DR), and a rendered ball is added (AR).">
+      <p class="cap">Original vs edited (frame from the scanned video).</p>
     </div>
   </section>
 
